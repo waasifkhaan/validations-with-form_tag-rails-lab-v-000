@@ -10,7 +10,20 @@
   </div>
 <% end %>
 <%= form_tag authors_path, method: "post" do %>
-  
+  <div class="field">
+    <%= label_tag "name", "Name" %>
+    <%= text_field_tag "name", @author.name %>
+  </div>
+
+  <div class="field">
+    <%= label_tag "email", "Email" %>
+    <%= text_field_tag "email", @author.email %>
+  </div>
+
+  <div class="field">
+    <%= label_tag "phone_number", "Phone Number" %>
+    <%= text_field_tag "phone_number", @author.phone_number %>
+  </div> 
   <div class="field<%= ' field_with_errors' if @author.errors[:name].any? %>">
     <%= label_tag "name", "Name" %>
     <%= text_field_tag "name", @author.name %>
@@ -22,7 +35,7 @@
   </div>
   <div class="field<%= ' field_with_errors' if @author.errors[:phone_number].any? %>">
     <%= label_tag "phone_number", "Phone_number" %>
-    <%= text_field_tag "phone_number", @person.phone_number %>
+    <%= text_field_tag "email", @person.Phone_number %>
   </div>
   
 
