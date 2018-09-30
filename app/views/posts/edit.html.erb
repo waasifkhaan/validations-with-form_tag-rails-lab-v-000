@@ -9,8 +9,8 @@
       </ul>
     </div>
   <% end %>
-<%= form_tag("/post") do %>
 
+<%= form_tag post_path, method: "post" do %>
  
  
   <div class="field<%= ' field_with_errors' if @post.errors[:title].any? %>">
