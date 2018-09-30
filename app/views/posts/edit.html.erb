@@ -1,5 +1,4 @@
 <h2>Editing "<%= @post.title %>"</h2>
-<%= form_tag("/post") do %>
 <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2>There were some errors:</h2>
@@ -10,6 +9,8 @@
       </ul>
     </div>
   <% end %>
+<%= form_tag("/post") do %>
+
  
  
   <div class="field<%= ' field_with_errors' if @post.errors[:title].any? %>">
