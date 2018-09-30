@@ -1,5 +1,5 @@
 <h2>Create an Author</h2>
-<% if @autho.errors.any? %>
+<% if @author.errors.any? %>
   <div id="error_explanation">
     <h2>There were some errors:</h2>
     <ul>
@@ -12,7 +12,7 @@
 <%= form_tag authors_path, method: "post" do %>
   <div class="field">
     <%= label_tag "name", "Name" %>
-    <%= text_field_tag "name", @person.name %>
+    <%= text_field_tag "name", @author.name %>
   </div>
 
   <div class="field">
